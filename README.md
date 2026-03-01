@@ -20,7 +20,7 @@
   [![Patreon](https://img.shields.io/badge/Patreon-F96854?style=for-the-badge&logo=patreon&logoColor=white)](https://patreon.com/itshexo) -->
 
   
-[![Discord Presence](https://lanyard.cnrad.dev/api/904399821580943420?borderRadius=:radius50px&idleMessage=:Doing%20somthing...&)](https://discord.com/users/904399821580943420t&)
+[![Discord Presence](https://lanyard.cnrad.dev/api/904399821580943420?bg=:262626&borderRadius=:radius50px&idleMessage=Doing%20somthing...&hideDecoration=true&showDisplayName=true)](https://discord.com/users/904399821580943420t&)
 
 ---
 
