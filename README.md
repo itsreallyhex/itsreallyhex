@@ -1,8 +1,8 @@
 # Hi, I'm Hex
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=itsreallyhex&label=Profile%20views&color=0e75b6&style=flat" alt="itsreallyhex" /> </p>
--
--I build it so you can use it
+
+-**I build it so you can use it**
 - Self taught 
 - 15 years old
 
