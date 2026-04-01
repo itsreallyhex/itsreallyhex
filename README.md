@@ -19,4 +19,4 @@
 [![](https://visitcount.itsvg.in/api?id=ElHexo&icon=0&color=0)](https://visitcount.itsvg.in)
 
   
-[![Discord Presence](https://lanyard.cnrad.dev/api/904399821580943420?borderRadius=:radius50px&idleMessage=Lowkey%20doing%20somthing.&hideDecoration=true&showDisplayName=true)](https://discord.com/users/904399821580943420t&)
+[![Discord Presence](https://lanyard.cnrad.dev/api/904399821580943420?borderRadius=:radius50px&idleMessage=Lowkey%20doing%20something.&hideDecoration=true&showDisplayName=true)](https://discord.com/users/904399821580943420t&)
