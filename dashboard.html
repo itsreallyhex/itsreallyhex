@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Apex Bank</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23c9a84c'/><text y='22' x='6' font-size='18' font-weight='900' fill='%230a0a0a'>A</text></svg>" />
+</head>
+<body>
+
+  <!-- Mobile overlay -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- Mobile menu toggle -->
+  <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round">
+            <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11"/>
+          </svg>
+        </div>
+        <div class="logo-text">Apex<span>Bank</span></div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-label">Main</div>
+        <a href="dashboard.html" class="nav-item active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          Dashboard
+        </a>
+        <a href="investments.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+            <polyline points="16 7 22 7 22 13"/>
+          </svg>
+          Investments
+        </a>
+        <a href="transactions.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+            <line x1="8" y1="18" x2="21" y2="18"/>
+            <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>
+            <line x1="3" y1="18" x2="3.01" y2="18"/>
+          </svg>
+          Transactions
+        </a>
+
+        <div class="nav-section-label">Services</div>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+          Cards
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+          Pay & Transfer
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          </svg>
+          Loans &amp; Credit
+        </a>
+
+        <div class="nav-section-label">Account</div>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/>
+          </svg>
+          Profile
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+          </svg>
+          Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="avatar">AJ</div>
+          <div class="sidebar-user-info">
+            <div class="name">Alex Johnson</div>
+            <div class="role">Private Client</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Good morning, Alex.</h1>
+          <p class="page-subtitle">Here's your financial overview — <span id="today-date"></span></p>
+        </div>
+        <div style="display:flex;align-items:center;gap:12px;">
+          <button class="btn btn-ghost btn-sm">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+            <span class="notif-dot"></span>
+          </button>
+          <div class="avatar lg">AJ</div>
+        </div>
+      </div>
+
+      <div class="page-body">
+
+        <!-- Net Worth Hero -->
+        <div class="net-worth-hero section fade-up" style="margin-bottom:28px;">
+          <div class="nwh-label">Total Net Worth</div>
+          <div class="nwh-amount" id="net-worth-display">$2,847,392.18</div>
+          <div class="nwh-change">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="14" height="14">
+              <polyline points="18 15 12 9 6 15"/>
+            </svg>
+            +$41,280.50 (1.47%) this month
+          </div>
+          <div class="nwh-meta">
+            <div class="nwh-meta-item">
+              <div class="label">As of</div>
+              <div class="value" id="nwh-date"></div>
+            </div>
+            <div class="nwh-meta-item">
+              <div class="label">Accounts</div>
+              <div class="value">3 Active</div>
+            </div>
+            <div class="nwh-meta-item">
+              <div class="label">YTD Return</div>
+              <div class="value" style="color:var(--green);">+18.4%</div>
+            </div>
+            <div class="nwh-meta-item">
+              <div class="label">Client Tier</div>
+              <div class="value" style="color:var(--gold);">Private Elite</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Account Cards -->
+        <div class="section">
+          <div class="section-header">
+            <h2 class="section-title">Your Accounts</h2>
+            <a href="#" class="section-link">Manage accounts →</a>
+          </div>
+          <div class="grid grid-3">
+
+            <div class="account-card gold fade-up fade-up-1">
+              <div class="ac-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" width="20" height="20">
+                  <rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/>
+                </svg>
+              </div>
+              <div class="ac-label">
+                <svg viewBox="0 0 8 8" fill="var(--gold)" width="8" height="8"><circle cx="4" cy="4" r="4"/></svg>
+                Checking Account
+              </div>
+              <div class="ac-amount">$124,500.00</div>
+              <div class="ac-meta">
+                <span>••• 4291</span>
+                <span class="ac-badge up">+$2,840 this week</span>
+              </div>
+            </div>
+
+            <div class="account-card dark fade-up fade-up-2">
+              <div class="ac-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--text-2)" stroke-width="2" stroke-linecap="round" width="20" height="20">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+              </div>
+              <div class="ac-label">Savings Account</div>
+              <div class="ac-amount">$487,250.75</div>
+              <div class="ac-meta">
+                <span>••• 7854</span>
+                <span class="ac-badge up">4.97% APY</span>
+              </div>
+            </div>
+
+            <div class="account-card blue-dark fade-up fade-up-3">
+              <div class="ac-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2" stroke-linecap="round" width="20" height="20">
+                  <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                  <polyline points="16 7 22 7 22 13"/>
+                </svg>
+              </div>
+              <div class="ac-label">Investment Portfolio</div>
+              <div class="ac-amount">$2,235,641.43</div>
+              <div class="ac-meta">
+                <span>Portfolio</span>
+                <span class="ac-badge up">+18.4% YTD</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Chart + Quick Actions -->
+        <div class="grid grid-2 section" style="grid-template-columns:1fr 320px;gap:24px;">
+
+          <!-- Portfolio Chart -->
+          <div class="card fade-up">
+            <div class="card-header">
+              <span class="card-title">Portfolio Growth</span>
+              <div style="display:flex;gap:8px;">
+                <button class="btn btn-ghost btn-sm chart-range-btn active-range" data-range="1M">1M</button>
+                <button class="btn btn-ghost btn-sm chart-range-btn" data-range="3M">3M</button>
+                <button class="btn btn-ghost btn-sm chart-range-btn" data-range="6M">6M</button>
+                <button class="btn btn-ghost btn-sm chart-range-btn" data-range="1Y">1Y</button>
+              </div>
+            </div>
+            <div class="card-body" style="padding-top:12px;">
+              <div class="chart-container" style="position:relative;">
+                <svg id="portfolio-chart" class="chart-svg" width="100%" height="200" viewBox="0 0 600 200" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.3"/>
+                      <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#9d7c2e"/>
+                      <stop offset="100%" stop-color="#e2c46e"/>
+                    </linearGradient>
+                  </defs>
+                  <!-- Grid lines -->
+                  <line x1="0" y1="40" x2="600" y2="40" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                  <line x1="0" y1="80" x2="600" y2="80" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                  <line x1="0" y1="120" x2="600" y2="120" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                  <line x1="0" y1="160" x2="600" y2="160" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+                  <!-- Area fill -->
+                  <path id="chart-area" fill="url(#chartGrad)"/>
+                  <!-- Line -->
+                  <path id="chart-line" fill="none" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <!-- Hover circle -->
+                  <circle id="chart-dot" r="5" fill="var(--gold)" stroke="var(--bg-2)" stroke-width="2" opacity="0" style="transition:opacity 0.1s;"/>
+                </svg>
+                <div class="chart-tooltip" id="chart-tooltip"></div>
+              </div>
+              <div class="stat-row" style="margin-top:16px;">
+                <div class="stat-item">
+                  <div class="stat-label">Current Value</div>
+                  <div class="stat-value">$2,235,641</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-label">Total Return</div>
+                  <div class="stat-value" style="color:var(--green);">+$348,200</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-label">Annualized</div>
+                  <div class="stat-value" style="color:var(--green);">+18.4%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="card fade-up fade-up-1">
+            <div class="card-header">
+              <span class="card-title">Quick Actions</span>
+            </div>
+            <div class="card-body">
+              <div class="grid grid-2" style="gap:12px;">
+                <button class="quick-action" onclick="showToast('Transfer initiated')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="17 1 21 5 17 9"/>
+                    <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+                    <polyline points="7 23 3 19 7 15"/>
+                    <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+                  </svg>
+                  Transfer
+                </button>
+                <button class="quick-action" onclick="showToast('Pay Bills opened')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="5" width="20" height="14" rx="2"/>
+                    <line x1="2" y1="10" x2="22" y2="10"/>
+                  </svg>
+                  Pay Bills
+                </button>
+                <button class="quick-action" onclick="window.location='investments.html'">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+                    <polyline points="16 7 22 7 22 13"/>
+                  </svg>
+                  Invest
+                </button>
+                <button class="quick-action" onclick="showToast('Generating statement...')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                    <polyline points="10 9 9 9 8 9"/>
+                  </svg>
+                  Statements
+                </button>
+                <button class="quick-action" onclick="showToast('Connecting to advisor...')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5"/>
+                    <path d="M1.61 4.87a2 2 0 0 1 1.99-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.1"/>
+                    <path d="M22 16.92a19.79 19.79 0 0 0-3.07-8.63A19.5 19.5 0 0 0 13.5 4.69"/>
+                  </svg>
+                  Advisor
+                </button>
+                <button class="quick-action" onclick="window.location='transactions.html'">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                  History
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="section">
+          <div class="section-header">
+            <h2 class="section-title">Recent Transactions</h2>
+            <a href="transactions.html" class="section-link">View all →</a>
+          </div>
+          <div class="card">
+            <div class="card-body" style="padding-top:8px;padding-bottom:8px;">
+              <div class="tx-list" id="recent-tx"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast notification -->
+  <div id="toast" style="position:fixed;bottom:24px;right:24px;background:var(--bg-3);border:1px solid var(--border-gold);border-radius:var(--radius);padding:14px 20px;font-size:0.875rem;font-weight:500;color:var(--gold);opacity:0;transform:translateY(8px);transition:all 0.3s;pointer-events:none;z-index:999;display:flex;align-items:center;gap:10px;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-msg"></span>
+  </div>
+
+  <script>
+    // Sidebar toggle
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    const menuToggle = document.getElementById('menu-toggle');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('open');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    });
+
+    // Dates
+    const now = new Date('2026-05-17');
+    document.getElementById('today-date').textContent = now.toLocaleDateString('en-US', { weekday:'long', month:'long', day:'numeric', year:'numeric' });
+    document.getElementById('nwh-date').textContent = now.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+
+    // Toast
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-msg').textContent = msg;
+      t.style.opacity = '1';
+      t.style.transform = 'translateY(0)';
+      clearTimeout(t._timer);
+      t._timer = setTimeout(() => {
+        t.style.opacity = '0';
+        t.style.transform = 'translateY(8px)';
+      }, 2500);
+    }
+
+    // Recent transactions data
+    const recentTx = [
+      { icon: '📈', type: 'invest',   name: 'AAPL Stock Purchase',    date: 'May 17, 2026',  amount: -12450.00, credit: false },
+      { icon: '💰', type: 'income',   name: 'Salary Deposit',          date: 'May 15, 2026', amount: +22500.00, credit: true  },
+      { icon: '✈️',  type: 'transfer', name: 'Emirates Business Class', date: 'May 14, 2026', amount: -8420.00,  credit: false },
+      { icon: '🏡', type: 'expense',  name: 'Mortgage Payment',         date: 'May 13, 2026', amount: -5800.00,  credit: false },
+      { icon: '🍽️', type: 'expense',  name: 'Nobu Restaurant',          date: 'May 12, 2026', amount: -840.00,   credit: false },
+      { icon: '💳', type: 'income',   name: 'Dividend — BRK.B',         date: 'May 10, 2026', amount: +1840.50,  credit: true  },
+      { icon: '🛒', type: 'expense',  name: 'Net-a-Porter',             date: 'May 9, 2026',  amount: -1290.00,  credit: false },
+      { icon: '💡', type: 'expense',  name: 'Utility Bill',             date: 'May 8, 2026',  amount: -320.00,   credit: false },
+      { icon: '📊', type: 'invest',   name: 'Portfolio Rebalance',      date: 'May 6, 2026',  amount: -25000.00, credit: false },
+      { icon: '💰', type: 'income',   name: 'Consulting Fee',           date: 'May 1, 2026',  amount: +14800.00, credit: true  },
+    ];
+
+    const txList = document.getElementById('recent-tx');
+    recentTx.forEach(tx => {
+      const div = document.createElement('div');
+      div.className = 'tx-item';
+      const sign = tx.credit ? '+' : '-';
+      const cls  = tx.credit ? 'credit' : 'debit';
+      div.innerHTML = `
+        <div class="tx-icon ${tx.type}">${tx.icon}</div>
+        <div class="tx-info">
+          <div class="tx-name">${tx.name}</div>
+          <div class="tx-date">${tx.date}</div>
+        </div>
+        <div class="tx-amount ${cls}">${sign}$${Math.abs(tx.amount).toLocaleString('en-US', {minimumFractionDigits:2,maximumFractionDigits:2})}</div>
+      `;
+      txList.appendChild(div);
+    });
+
+    // Portfolio chart
+    const chartData = {
+      '1M': [1887000,1902000,1918000,1895000,1910000,1928000,1945000,1932000,1960000,1978000,1991000,2008000,1998000,2015000,2034000,2021000,2048000,2062000,2079000,2095000,2088000,2110000,2128000,2145000,2162000,2150000,2178000,2195000,2215000,2236000],
+      '3M': [1720000,1748000,1762000,1739000,1780000,1810000,1795000,1830000,1858000,1844000,1870000,1895000,1879000,1910000,1938000,1924000,1950000,1972000,1988000,2010000,1998000,2025000,2048000,2060000,2082000,2098000,2115000,2136000,2155000,2180000,2195000,2215000,2236000],
+      '6M': [1550000,1590000,1575000,1620000,1648000,1632000,1670000,1695000,1718000,1704000,1740000,1762000,1778000,1795000,1812000,1800000,1828000,1855000,1870000,1892000,1878000,1905000,1922000,1940000,1958000,1975000,1990000,2010000,2028000,2045000,2065000,2085000,2110000,2128000,2148000,2165000,2185000,2210000,2236000],
+      '1Y': [1100000,1145000,1128000,1170000,1198000,1182000,1215000,1238000,1255000,1240000,1272000,1295000,1315000,1298000,1330000,1355000,1372000,1390000,1375000,1405000,1428000,1445000,1462000,1480000,1498000,1512000,1530000,1548000,1565000,1582000,1598000,1618000,1640000,1660000,1678000,1695000,1715000,1735000,1752000,1770000,1790000,1812000,1835000,1852000,1870000,1890000,1910000,1930000,1948000,1968000,1985000,1960000,1990000,2010000,2030000,2048000,2070000,2090000,2110000,2128000,2148000,2165000,2185000,2210000,2220000,2236000]
+    };
+
+    let activeRange = '1M';
+
+    function renderChart(range) {
+      const data = chartData[range];
+      const svg = document.getElementById('portfolio-chart');
+      const W = 600, H = 200, pad = 10;
+      const min = Math.min(...data) * 0.98;
+      const max = Math.max(...data) * 1.01;
+
+      const pts = data.map((v, i) => {
+        const x = pad + (i / (data.length - 1)) * (W - pad * 2);
+        const y = H - pad - ((v - min) / (max - min)) * (H - pad * 2);
+        return [x, y];
+      });
+
+      const linePath = pts.map((p, i) => `${i === 0 ? 'M' : 'L'}${p[0].toFixed(1)},${p[1].toFixed(1)}`).join(' ');
+      const areaPath = linePath + ` L${pts[pts.length-1][0].toFixed(1)},${H} L${pts[0][0].toFixed(1)},${H} Z`;
+
+      document.getElementById('chart-line').setAttribute('d', linePath);
+      document.getElementById('chart-area').setAttribute('d', areaPath);
+
+      // Hover
+      const chartSvg = svg;
+      const dot = document.getElementById('chart-dot');
+      const tooltip = document.getElementById('chart-tooltip');
+
+      chartSvg.onmousemove = (e) => {
+        const rect = chartSvg.getBoundingClientRect();
+        const scaleX = W / rect.width;
+        const mx = (e.clientX - rect.left) * scaleX;
+        let closest = 0, minDist = Infinity;
+        pts.forEach((p, i) => {
+          const d = Math.abs(p[0] - mx);
+          if (d < minDist) { minDist = d; closest = i; }
+        });
+        const [cx, cy] = pts[closest];
+        const svgX = cx / W * rect.width;
+        const svgY = cy / H * rect.height;
+        dot.setAttribute('cx', cx);
+        dot.setAttribute('cy', cy);
+        dot.setAttribute('opacity', '1');
+        tooltip.style.opacity = '1';
+        tooltip.style.left = `${Math.min(svgX, rect.width - 140)}px`;
+        tooltip.style.top  = `${svgY - 48}px`;
+        tooltip.textContent = '$' + data[closest].toLocaleString('en-US');
+      };
+
+      chartSvg.onmouseleave = () => {
+        dot.setAttribute('opacity', '0');
+        tooltip.style.opacity = '0';
+      };
+    }
+
+    renderChart('1M');
+
+    document.querySelectorAll('.chart-range-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.chart-range-btn').forEach(b => b.classList.remove('active-range'));
+        btn.classList.add('active-range');
+        const style = document.createElement('style');
+        style.textContent = '.active-range{background:var(--gold-dim)!important;border-color:var(--border-gold)!important;color:var(--gold)!important;}';
+        document.head.appendChild(style);
+        activeRange = btn.dataset.range;
+        renderChart(activeRange);
+      });
+    });
+
+    // Inject active-range style once
+    const s = document.createElement('style');
+    s.textContent = '.active-range{background:var(--gold-dim)!important;border-color:var(--border-gold)!important;color:var(--gold)!important;}';
+    document.head.appendChild(s);
+  </script>
+</body>
+</html>

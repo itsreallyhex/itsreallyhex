@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transactions — Apex Bank</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23c9a84c'/><text y='22' x='6' font-size='18' font-weight='900' fill='%230a0a0a'>A</text></svg>" />
+</head>
+<body>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round">
+            <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11"/>
+          </svg>
+        </div>
+        <div class="logo-text">Apex<span>Bank</span></div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-label">Main</div>
+        <a href="dashboard.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          Dashboard
+        </a>
+        <a href="investments.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+            <polyline points="16 7 22 7 22 13"/>
+          </svg>
+          Investments
+        </a>
+        <a href="transactions.html" class="nav-item active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+            <line x1="8" y1="18" x2="21" y2="18"/>
+            <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>
+            <line x1="3" y1="18" x2="3.01" y2="18"/>
+          </svg>
+          Transactions
+        </a>
+
+        <div class="nav-section-label">Services</div>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+          Cards
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+          Pay &amp; Transfer
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          </svg>
+          Loans &amp; Credit
+        </a>
+
+        <div class="nav-section-label">Account</div>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/>
+          </svg>
+          Profile
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+          </svg>
+          Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="avatar">AJ</div>
+          <div class="sidebar-user-info">
+            <div class="name">Alex Johnson</div>
+            <div class="role">Private Client</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Transactions</h1>
+          <p class="page-subtitle">Complete history of your financial activity</p>
+        </div>
+        <button class="btn btn-outline btn-sm" onclick="showToast('CSV download started')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="14" height="14">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Export CSV
+        </button>
+      </div>
+
+      <div class="page-body">
+
+        <!-- Summary cards -->
+        <div class="grid grid-4 section fade-up">
+          <div class="card">
+            <div class="card-body" style="padding:18px 20px;">
+              <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-3);margin-bottom:6px;">Total Income</div>
+              <div style="font-size:1.3rem;font-weight:800;color:var(--green);" id="stat-income">—</div>
+              <div style="font-size:0.75rem;color:var(--text-3);margin-top:2px;">May 2026</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body" style="padding:18px 20px;">
+              <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-3);margin-bottom:6px;">Total Expenses</div>
+              <div style="font-size:1.3rem;font-weight:800;color:var(--red);" id="stat-expenses">—</div>
+              <div style="font-size:0.75rem;color:var(--text-3);margin-top:2px;">May 2026</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body" style="padding:18px 20px;">
+              <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-3);margin-bottom:6px;">Transactions</div>
+              <div style="font-size:1.3rem;font-weight:800;" id="stat-count">—</div>
+              <div style="font-size:0.75rem;color:var(--text-3);margin-top:2px;">This period</div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body" style="padding:18px 20px;">
+              <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.8px;color:var(--text-3);margin-bottom:6px;">Net Cash Flow</div>
+              <div style="font-size:1.3rem;font-weight:800;" id="stat-net">—</div>
+              <div style="font-size:0.75rem;color:var(--text-3);margin-top:2px;">May 2026</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="section">
+          <div class="filter-bar" style="margin-bottom:16px;">
+            <div class="search-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+              <input type="text" class="search-input" id="search-input" placeholder="Search transactions…" />
+            </div>
+            <select class="filter-select" id="category-filter">
+              <option value="all">All Categories</option>
+              <option value="income">Income</option>
+              <option value="dining">Dining</option>
+              <option value="travel">Travel</option>
+              <option value="shopping">Shopping</option>
+              <option value="utilities">Utilities</option>
+              <option value="transfer">Transfer</option>
+              <option value="invest">Investments</option>
+            </select>
+            <select class="filter-select" id="account-filter">
+              <option value="all">All Accounts</option>
+              <option value="checking">Checking ••4291</option>
+              <option value="savings">Savings ••7854</option>
+              <option value="invest">Portfolio</option>
+            </select>
+            <select class="filter-select" id="type-filter">
+              <option value="all">All Types</option>
+              <option value="credit">Credits</option>
+              <option value="debit">Debits</option>
+            </select>
+            <button class="btn btn-ghost btn-sm" id="reset-filters">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="14" height="14">
+                <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.5"/>
+              </svg>
+              Reset
+            </button>
+          </div>
+
+          <!-- Results count -->
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+            <span style="font-size:0.8rem;color:var(--text-3);" id="results-count">Showing all transactions</span>
+            <div style="display:flex;gap:8px;align-items:center;">
+              <span style="font-size:0.78rem;color:var(--text-3);">Sort:</span>
+              <select class="filter-select" id="sort-select" style="padding:6px 28px 6px 10px;font-size:0.8rem;">
+                <option value="date-desc">Date (Newest)</option>
+                <option value="date-asc">Date (Oldest)</option>
+                <option value="amount-desc">Amount (High)</option>
+                <option value="amount-asc">Amount (Low)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Table -->
+          <div class="data-table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Description</th>
+                  <th>Category</th>
+                  <th>Account</th>
+                  <th class="num">Amount</th>
+                  <th class="num">Balance</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="tx-body"></tbody>
+            </table>
+          </div>
+
+          <!-- Pagination -->
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-top:16px;flex-wrap:wrap;gap:12px;">
+            <span style="font-size:0.8rem;color:var(--text-3);" id="page-info">Page 1 of 1</span>
+            <div style="display:flex;gap:6px;" id="pagination"></div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" style="position:fixed;bottom:24px;right:24px;background:var(--bg-3);border:1px solid var(--border-gold);border-radius:var(--radius);padding:14px 20px;font-size:0.875rem;font-weight:500;color:var(--gold);opacity:0;transform:translateY(8px);transition:all 0.3s;pointer-events:none;z-index:999;display:flex;align-items:center;gap:10px;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-msg"></span>
+  </div>
+
+  <script>
+    // Sidebar
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    document.getElementById('menu-toggle').addEventListener('click', () => { sidebar.classList.toggle('open'); overlay.classList.toggle('open'); });
+    overlay.addEventListener('click', () => { sidebar.classList.remove('open'); overlay.classList.remove('open'); });
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-msg').textContent = msg;
+      t.style.opacity = '1'; t.style.transform = 'translateY(0)';
+      clearTimeout(t._timer);
+      t._timer = setTimeout(() => { t.style.opacity='0'; t.style.transform='translateY(8px)'; }, 2500);
+    }
+
+    function fmt(n) { return n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+
+    // Full transaction dataset (25 transactions)
+    const allTx = [
+      { date:'2026-05-17', desc:'AAPL Stock Purchase',          cat:'invest',   account:'invest',   amount:-12450.00, icon:'📈' },
+      { date:'2026-05-15', desc:'Salary Deposit — Apex Capital', cat:'income',   account:'checking', amount:+22500.00, icon:'💰' },
+      { date:'2026-05-14', desc:'Emirates Business Class — DXB', cat:'travel',   account:'checking', amount:-8420.00,  icon:'✈️'  },
+      { date:'2026-05-13', desc:'Mortgage Payment',              cat:'utilities',account:'checking', amount:-5800.00,  icon:'🏡' },
+      { date:'2026-05-12', desc:'Nobu Restaurant — Tribeca',     cat:'dining',   account:'checking', amount:-840.00,   icon:'🍽️' },
+      { date:'2026-05-10', desc:'Dividend — BRK.B',              cat:'income',   account:'invest',   amount:+1840.50,  icon:'💳' },
+      { date:'2026-05-09', desc:'Net-a-Porter — Spring Order',   cat:'shopping', account:'checking', amount:-1290.00,  icon:'🛒' },
+      { date:'2026-05-08', desc:'ConEdison Utility Bill',        cat:'utilities',account:'checking', amount:-320.00,   icon:'💡' },
+      { date:'2026-05-06', desc:'Portfolio Rebalance',           cat:'invest',   account:'invest',   amount:-25000.00, icon:'📊' },
+      { date:'2026-05-01', desc:'Consulting Fee — VCG Partners', cat:'income',   account:'checking', amount:+14800.00, icon:'💰' },
+      { date:'2026-04-28', desc:'The French Laundry — Napa',     cat:'dining',   account:'checking', amount:-1480.00,  icon:'🍽️' },
+      { date:'2026-04-25', desc:'Four Seasons — Maldives 4 nts', cat:'travel',   account:'checking', amount:-14800.00, icon:'✈️'  },
+      { date:'2026-04-22', desc:'MSFT Dividend',                 cat:'income',   account:'invest',   amount:+712.50,   icon:'💳' },
+      { date:'2026-04-20', desc:'Savings Transfer',              cat:'transfer', account:'savings',  amount:+20000.00, icon:'🔄' },
+      { date:'2026-04-18', desc:'Hermès — Madison Ave',          cat:'shopping', account:'checking', amount:-4200.00,  icon:'🛒' },
+      { date:'2026-04-15', desc:'Salary Deposit — Apex Capital', cat:'income',   account:'checking', amount:+22500.00, icon:'💰' },
+      { date:'2026-04-14', desc:'Verizon Wireless',              cat:'utilities',account:'checking', amount:-185.00,   icon:'📱' },
+      { date:'2026-04-12', desc:'Tesla Shares — 20 shares',      cat:'invest',   account:'invest',   amount:-4972.00,  icon:'📈' },
+      { date:'2026-04-10', desc:'Per Se Restaurant — NYC',       cat:'dining',   account:'checking', amount:-920.00,   icon:'🍽️' },
+      { date:'2026-04-08', desc:'Rental Income — 480 Park Ave',  cat:'income',   account:'checking', amount:+8500.00,  icon:'🏢' },
+      { date:'2026-04-05', desc:'Savings Interest',              cat:'income',   account:'savings',  amount:+2022.60,  icon:'💰' },
+      { date:'2026-04-03', desc:'Amazon — Office Supplies',      cat:'shopping', account:'checking', amount:-480.00,   icon:'🛒' },
+      { date:'2026-04-01', desc:'Property Tax Q2',               cat:'utilities',account:'checking', amount:-12400.00, icon:'🏛️' },
+      { date:'2026-03-28', desc:'Delta First Class — LAX',       cat:'travel',   account:'checking', amount:-3240.00,  icon:'✈️'  },
+      { date:'2026-03-25', desc:'QQQ ETF Purchase',              cat:'invest',   account:'invest',   amount:-9578.00,  icon:'📊' },
+    ];
+
+    // Compute running balance backwards
+    const STARTING_BALANCE = 124500.00;
+    let bal = STARTING_BALANCE;
+    const txWithBalance = [];
+    for (let i = 0; i < allTx.length; i++) {
+      txWithBalance.push({ ...allTx[i], balance: bal });
+      bal -= allTx[i].amount;
+    }
+
+    // Update summary stats
+    function updateStats(data) {
+      const income   = data.filter(t => t.amount > 0).reduce((s, t) => s + t.amount, 0);
+      const expenses = data.filter(t => t.amount < 0).reduce((s, t) => s + t.amount, 0);
+      const net      = income + expenses;
+
+      document.getElementById('stat-income').textContent   = '+$' + fmt(income);
+      document.getElementById('stat-expenses').textContent = '-$' + fmt(Math.abs(expenses));
+      document.getElementById('stat-count').textContent    = data.length;
+      const netEl = document.getElementById('stat-net');
+      netEl.textContent = (net >= 0 ? '+$' : '-$') + fmt(Math.abs(net));
+      netEl.style.color = net >= 0 ? 'var(--green)' : 'var(--red)';
+    }
+
+    const catLabels = {
+      income:'income', dining:'dining', travel:'travel',
+      shopping:'shopping', utilities:'utilities', transfer:'transfer', invest:'invest'
+    };
+    const catNames = {
+      income:'Income', dining:'Dining', travel:'Travel',
+      shopping:'Shopping', utilities:'Utilities', transfer:'Transfer', invest:'Investments'
+    };
+
+    let currentPage = 1;
+    const PAGE_SIZE = 10;
+    let filtered = [...txWithBalance];
+
+    function getFiltered() {
+      const q   = document.getElementById('search-input').value.toLowerCase();
+      const cat = document.getElementById('category-filter').value;
+      const acc = document.getElementById('account-filter').value;
+      const typ = document.getElementById('type-filter').value;
+      const srt = document.getElementById('sort-select').value;
+
+      let data = txWithBalance.filter(t => {
+        if (q   && !t.desc.toLowerCase().includes(q) && !t.cat.includes(q)) return false;
+        if (cat !== 'all' && t.cat !== cat) return false;
+        if (acc !== 'all' && t.account !== acc) return false;
+        if (typ === 'credit' && t.amount < 0) return false;
+        if (typ === 'debit'  && t.amount > 0) return false;
+        return true;
+      });
+
+      data.sort((a, b) => {
+        if (srt === 'date-desc')    return new Date(b.date) - new Date(a.date);
+        if (srt === 'date-asc')     return new Date(a.date) - new Date(b.date);
+        if (srt === 'amount-desc')  return Math.abs(b.amount) - Math.abs(a.amount);
+        if (srt === 'amount-asc')   return Math.abs(a.amount) - Math.abs(b.amount);
+        return 0;
+      });
+
+      return data;
+    }
+
+    function renderTable() {
+      filtered = getFiltered();
+      const totalPages = Math.ceil(filtered.length / PAGE_SIZE);
+      if (currentPage > totalPages) currentPage = Math.max(1, totalPages);
+
+      const start = (currentPage - 1) * PAGE_SIZE;
+      const page  = filtered.slice(start, start + PAGE_SIZE);
+
+      updateStats(filtered);
+
+      const tbody = document.getElementById('tx-body');
+      tbody.innerHTML = '';
+
+      if (page.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;padding:40px;color:var(--text-3);">No transactions match your filters.</td></tr>`;
+        document.getElementById('results-count').textContent = '0 results';
+        document.getElementById('page-info').textContent = 'Page 0 of 0';
+        document.getElementById('pagination').innerHTML = '';
+        return;
+      }
+
+      page.forEach(t => {
+        const isCredit = t.amount > 0;
+        const dateObj  = new Date(t.date + 'T00:00:00');
+        const dateStr  = dateObj.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
+        const accLabel = { checking:'Checking ••4291', savings:'Savings ••7854', invest:'Portfolio' }[t.account] || t.account;
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td style="white-space:nowrap;color:var(--text-2);font-size:0.82rem;">${dateStr}</td>
+          <td>
+            <div style="display:flex;align-items:center;gap:10px;">
+              <span style="font-size:1rem;">${t.icon}</span>
+              <span style="font-weight:500;">${t.desc}</span>
+            </div>
+          </td>
+          <td><span class="badge badge-${catLabels[t.cat]}">${catNames[t.cat]}</span></td>
+          <td style="font-size:0.8rem;color:var(--text-2);">${accLabel}</td>
+          <td class="num" style="color:${isCredit?'var(--green)':'var(--text-1)'};">
+            ${isCredit?'+':'-'}$${fmt(Math.abs(t.amount))}
+          </td>
+          <td class="num" style="color:var(--text-2);">$${fmt(t.balance)}</td>
+          <td>
+            <button class="btn btn-ghost btn-sm" style="font-size:0.72rem;" onclick="showToast('Transaction details loaded')">Details</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      document.getElementById('results-count').textContent =
+        `Showing ${start + 1}–${Math.min(start + PAGE_SIZE, filtered.length)} of ${filtered.length} transactions`;
+      document.getElementById('page-info').textContent = `Page ${currentPage} of ${totalPages}`;
+
+      // Pagination
+      const pagEl = document.getElementById('pagination');
+      pagEl.innerHTML = '';
+
+      const prevBtn = document.createElement('button');
+      prevBtn.className = 'btn btn-ghost btn-sm';
+      prevBtn.textContent = '←';
+      prevBtn.disabled = currentPage === 1;
+      prevBtn.addEventListener('click', () => { currentPage--; renderTable(); });
+      pagEl.appendChild(prevBtn);
+
+      for (let p = 1; p <= totalPages; p++) {
+        const pb = document.createElement('button');
+        pb.className = 'btn btn-ghost btn-sm' + (p === currentPage ? ' active-page' : '');
+        pb.textContent = p;
+        pb.addEventListener('click', () => { currentPage = p; renderTable(); });
+        pagEl.appendChild(pb);
+      }
+
+      const nextBtn = document.createElement('button');
+      nextBtn.className = 'btn btn-ghost btn-sm';
+      nextBtn.textContent = '→';
+      nextBtn.disabled = currentPage === totalPages;
+      nextBtn.addEventListener('click', () => { currentPage++; renderTable(); });
+      pagEl.appendChild(nextBtn);
+    }
+
+    // Active page style
+    const ps = document.createElement('style');
+    ps.textContent = '.active-page{background:var(--gold-dim)!important;border-color:var(--border-gold)!important;color:var(--gold)!important;}';
+    document.head.appendChild(ps);
+
+    // Event listeners
+    ['search-input','category-filter','account-filter','type-filter','sort-select'].forEach(id => {
+      document.getElementById(id).addEventListener('input', () => { currentPage = 1; renderTable(); });
+    });
+
+    document.getElementById('reset-filters').addEventListener('click', () => {
+      document.getElementById('search-input').value = '';
+      document.getElementById('category-filter').value = 'all';
+      document.getElementById('account-filter').value = 'all';
+      document.getElementById('type-filter').value = 'all';
+      document.getElementById('sort-select').value = 'date-desc';
+      currentPage = 1;
+      renderTable();
+    });
+
+    // Initial render
+    renderTable();
+  </script>
+</body>
+</html>

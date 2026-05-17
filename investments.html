@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Investments — Apex Bank</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23c9a84c'/><text y='22' x='6' font-size='18' font-weight='900' fill='%230a0a0a'>A</text></svg>" />
+</head>
+<body>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+  <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0a0a0a" stroke-width="2.5" stroke-linecap="round">
+            <path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 10v11M12 10v11M16 10v11"/>
+          </svg>
+        </div>
+        <div class="logo-text">Apex<span>Bank</span></div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-label">Main</div>
+        <a href="dashboard.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          Dashboard
+        </a>
+        <a href="investments.html" class="nav-item active">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/>
+            <polyline points="16 7 22 7 22 13"/>
+          </svg>
+          Investments
+        </a>
+        <a href="transactions.html" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+            <line x1="8" y1="18" x2="21" y2="18"/>
+            <line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/>
+            <line x1="3" y1="18" x2="3.01" y2="18"/>
+          </svg>
+          Transactions
+        </a>
+
+        <div class="nav-section-label">Services</div>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+          </svg>
+          Cards
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+          Pay &amp; Transfer
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          </svg>
+          Loans &amp; Credit
+        </a>
+
+        <div class="nav-section-label">Account</div>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 1 0-16 0"/>
+          </svg>
+          Profile
+        </a>
+        <a href="#" class="nav-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+          </svg>
+          Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-user">
+          <div class="avatar">AJ</div>
+          <div class="sidebar-user-info">
+            <div class="name">Alex Johnson</div>
+            <div class="role">Private Client</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <div class="page-header">
+        <div>
+          <h1 class="page-title">Investment Portfolio</h1>
+          <p class="page-subtitle">Performance as of May 17, 2026</p>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <button class="btn btn-outline btn-sm" onclick="showToast('Report generated')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="14" height="14">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Export
+          </button>
+          <button class="btn btn-gold btn-sm" onclick="showToast('Opening trade desk...')">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="14" height="14">
+              <line x1="12" y1="5" x2="12" y2="19"/>
+              <line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+            New Trade
+          </button>
+        </div>
+      </div>
+
+      <div class="page-body">
+
+        <!-- Portfolio summary cards -->
+        <div class="grid grid-4 section fade-up">
+          <div class="account-card gold" style="padding:20px;">
+            <div class="ac-label">Total Value</div>
+            <div class="ac-amount" style="font-size:1.4rem;">$2,235,641.43</div>
+            <div class="ac-meta"><span class="ac-badge up">+18.4% YTD</span></div>
+          </div>
+          <div class="account-card dark" style="padding:20px;">
+            <div class="ac-label">Day Gain</div>
+            <div class="ac-amount" style="font-size:1.4rem;color:var(--green);">+$8,240.18</div>
+            <div class="ac-meta"><span class="ac-badge up">+0.37% today</span></div>
+          </div>
+          <div class="account-card dark" style="padding:20px;">
+            <div class="ac-label">Total Return</div>
+            <div class="ac-amount" style="font-size:1.4rem;color:var(--green);">+$348,200.00</div>
+            <div class="ac-meta"><span style="color:var(--text-3);font-size:0.75rem;">Since inception Jan 2024</span></div>
+          </div>
+          <div class="account-card dark" style="padding:20px;">
+            <div class="ac-label">Dividend Income</div>
+            <div class="ac-amount" style="font-size:1.4rem;">$18,420.50</div>
+            <div class="ac-meta"><span style="color:var(--text-3);font-size:0.75rem;">YTD 2026</span></div>
+          </div>
+        </div>
+
+        <!-- Holdings + Donut chart + News -->
+        <div class="content-grid section">
+          <div>
+            <!-- Holdings table -->
+            <div class="section">
+              <div class="section-header">
+                <h2 class="section-title">Holdings</h2>
+                <div style="display:flex;gap:8px;">
+                  <button class="btn btn-ghost btn-sm sort-btn active-sort" data-sort="value">By Value</button>
+                  <button class="btn btn-ghost btn-sm sort-btn" data-sort="gain">By Gain</button>
+                  <button class="btn btn-ghost btn-sm sort-btn" data-sort="name">By Name</button>
+                </div>
+              </div>
+              <div class="data-table-wrap">
+                <table class="data-table" id="holdings-table">
+                  <thead>
+                    <tr>
+                      <th>Ticker</th>
+                      <th>Company</th>
+                      <th class="num">Shares</th>
+                      <th class="num">Price</th>
+                      <th class="num">Value</th>
+                      <th class="num">Cost Basis</th>
+                      <th class="num">Gain / Loss</th>
+                      <th class="num">Change</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="holdings-body"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Allocation donut -->
+            <div class="card section">
+              <div class="card-header">
+                <span class="card-title">Sector Allocation</span>
+              </div>
+              <div class="card-body">
+                <div class="donut-wrap">
+                  <svg id="donut-svg" width="220" height="220" viewBox="0 0 220 220" style="flex-shrink:0;">
+                    <defs>
+                      <filter id="donut-shadow">
+                        <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.4)"/>
+                      </filter>
+                    </defs>
+                    <g id="donut-slices" filter="url(#donut-shadow)"></g>
+                    <!-- Center text -->
+                    <text x="110" y="104" text-anchor="middle" fill="var(--text-3)" font-size="11" font-family="Inter,sans-serif">Total</text>
+                    <text x="110" y="122" text-anchor="middle" fill="var(--white)" font-size="13" font-weight="700" font-family="Inter,sans-serif">$2.24M</text>
+                  </svg>
+                  <div class="donut-legend" id="donut-legend"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- News sidebar -->
+          <div>
+            <div class="card" style="position:sticky;top:24px;">
+              <div class="card-header" style="padding-bottom:12px;">
+                <span class="card-title">Market News</span>
+                <span class="notif-dot"></span>
+              </div>
+              <div class="card-body" style="padding-top:0;">
+                <div id="news-list"></div>
+              </div>
+            </div>
+
+            <!-- Market summary -->
+            <div class="card" style="margin-top:20px;">
+              <div class="card-header">
+                <span class="card-title">Market Summary</span>
+              </div>
+              <div class="card-body">
+                <div id="market-indices"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+  <div id="toast" style="position:fixed;bottom:24px;right:24px;background:var(--bg-3);border:1px solid var(--border-gold);border-radius:var(--radius);padding:14px 20px;font-size:0.875rem;font-weight:500;color:var(--gold);opacity:0;transform:translateY(8px);transition:all 0.3s;pointer-events:none;z-index:999;display:flex;align-items:center;gap:10px;">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" width="16" height="16"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-msg"></span>
+  </div>
+
+  <script>
+    // Sidebar
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('open');
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('open');
+    });
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-msg').textContent = msg;
+      t.style.opacity = '1';
+      t.style.transform = 'translateY(0)';
+      clearTimeout(t._timer);
+      t._timer = setTimeout(() => { t.style.opacity='0'; t.style.transform='translateY(8px)'; }, 2500);
+    }
+
+    // Holdings data
+    const holdings = [
+      { ticker:'AAPL',  name:'Apple Inc.',              shares:420,    price:211.84,  cost:168.40,  dayChg:+1.24,  sector:'Technology' },
+      { ticker:'MSFT',  name:'Microsoft Corp.',          shares:285,    price:412.50,  cost:320.10,  dayChg:+0.88,  sector:'Technology' },
+      { ticker:'GOOGL', name:'Alphabet Inc. Class A',    shares:195,    price:178.92,  cost:142.50,  dayChg:-0.34,  sector:'Technology' },
+      { ticker:'TSLA',  name:'Tesla, Inc.',              shares:380,    price:248.60,  cost:310.20,  dayChg:+2.18,  sector:'Consumer' },
+      { ticker:'BRK.B', name:'Berkshire Hathaway B',     shares:720,    price:395.20,  cost:310.00,  dayChg:+0.45,  sector:'Financials' },
+      { ticker:'JPM',   name:'JPMorgan Chase & Co.',     shares:310,    price:224.80,  cost:198.40,  dayChg:+0.62,  sector:'Financials' },
+      { ticker:'JNJ',   name:'Johnson & Johnson',        shares:480,    price:168.40,  cost:155.20,  dayChg:-0.18,  sector:'Healthcare' },
+      { ticker:'VNQ',   name:'Vanguard Real Estate ETF', shares:1200,   price:88.40,   cost:82.10,   dayChg:-0.52,  sector:'Real Estate' },
+      { ticker:'GLD',   name:'SPDR Gold Shares',         shares:560,    price:231.50,  cost:198.40,  dayChg:+0.74,  sector:'Commodities' },
+      { ticker:'QQQ',   name:'Invesco QQQ Trust',        shares:180,    price:478.90,  cost:395.20,  dayChg:+1.05,  sector:'Technology' },
+    ];
+
+    function fmt(n, dec=2) {
+      return n.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+    }
+
+    function renderHoldings(data) {
+      const tbody = document.getElementById('holdings-body');
+      tbody.innerHTML = '';
+      data.forEach(h => {
+        const value    = h.shares * h.price;
+        const costTot  = h.shares * h.cost;
+        const gain     = value - costTot;
+        const gainPct  = (gain / costTot) * 100;
+        const isPos    = gain >= 0;
+        const isDayPos = h.dayChg >= 0;
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><span class="ticker">${h.ticker}</span></td>
+          <td style="color:var(--text-2);font-size:0.82rem;max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${h.name}</td>
+          <td class="num">${fmt(h.shares, 0)}</td>
+          <td class="num">$${fmt(h.price)}</td>
+          <td class="num">$${fmt(value)}</td>
+          <td class="num" style="color:var(--text-2);">$${fmt(costTot)}</td>
+          <td class="num">
+            <div style="display:flex;flex-direction:column;align-items:flex-end;gap:2px;">
+              <span style="color:${isPos?'var(--green)':'var(--red)'};">${isPos?'+':'-'}$${fmt(Math.abs(gain))}</span>
+              <span class="change-pill ${isPos?'pos':'neg'}">${isPos?'▲':'▼'} ${fmt(Math.abs(gainPct))}%</span>
+            </div>
+          </td>
+          <td class="num">
+            <span class="change-pill ${isDayPos?'pos':'neg'}">${isDayPos?'+':''}${h.dayChg}%</span>
+          </td>
+          <td>
+            <button class="btn btn-ghost btn-sm" style="font-size:0.72rem;" onclick="showToast('Opening ${h.ticker} details...')">Trade</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    renderHoldings(holdings);
+
+    // Sort buttons
+    const sortStyle = document.createElement('style');
+    sortStyle.textContent = '.active-sort{background:var(--gold-dim)!important;border-color:var(--border-gold)!important;color:var(--gold)!important;}';
+    document.head.appendChild(sortStyle);
+
+    document.querySelectorAll('.sort-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active-sort'));
+        btn.classList.add('active-sort');
+        const s = btn.dataset.sort;
+        const sorted = [...holdings].sort((a, b) => {
+          if (s === 'value') return (b.shares * b.price) - (a.shares * a.price);
+          if (s === 'gain')  return ((b.shares*b.price - b.shares*b.cost)/b.shares/b.cost) - ((a.shares*a.price - a.shares*a.cost)/a.shares/a.cost);
+          if (s === 'name')  return a.ticker.localeCompare(b.ticker);
+          return 0;
+        });
+        renderHoldings(sorted);
+      });
+    });
+
+    // Donut chart
+    const sectors = [
+      { name:'Technology',  value:892256, color:'#c9a84c' },
+      { name:'Financials',  value:448560, color:'#3b82f6' },
+      { name:'Consumer',    value:249428, color:'#a855f7' },
+      { name:'Real Estate', value:201600, color:'#22c55e' },
+      { name:'Healthcare',  value:80832,  color:'#f59e0b' },
+      { name:'Commodities', value:129640, color:'#ef4444' },
+      { name:'Other',       value:33325,  color:'#64748b' },
+    ];
+
+    const total = sectors.reduce((s, x) => s + x.value, 0);
+    const CX = 110, CY = 110, R = 88, IR = 64;
+    let startAngle = -Math.PI / 2;
+    const slicesG = document.getElementById('donut-slices');
+    const legendEl = document.getElementById('donut-legend');
+
+    sectors.forEach(sec => {
+      const pct = sec.value / total;
+      const angle = pct * 2 * Math.PI;
+      const endAngle = startAngle + angle;
+
+      const x1 = CX + R * Math.cos(startAngle);
+      const y1 = CY + R * Math.sin(startAngle);
+      const x2 = CX + R * Math.cos(endAngle);
+      const y2 = CY + R * Math.sin(endAngle);
+      const ix1 = CX + IR * Math.cos(startAngle);
+      const iy1 = CY + IR * Math.sin(startAngle);
+      const ix2 = CX + IR * Math.cos(endAngle);
+      const iy2 = CY + IR * Math.sin(endAngle);
+      const lg = angle > Math.PI ? 1 : 0;
+
+      const d = `M ${ix1} ${iy1} L ${x1} ${y1} A ${R} ${R} 0 ${lg} 1 ${x2} ${y2} L ${ix2} ${iy2} A ${IR} ${IR} 0 ${lg} 0 ${ix1} ${iy1} Z`;
+
+      const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      path.setAttribute('d', d);
+      path.setAttribute('fill', sec.color);
+      path.setAttribute('opacity', '0.85');
+      path.setAttribute('stroke', 'var(--bg-2)');
+      path.setAttribute('stroke-width', '2');
+      path.style.transition = 'opacity 0.2s, transform 0.2s';
+      path.style.transformOrigin = `${CX}px ${CY}px`;
+      path.style.cursor = 'pointer';
+
+      path.addEventListener('mouseenter', () => {
+        path.setAttribute('opacity', '1');
+        path.style.transform = 'scale(1.04)';
+      });
+      path.addEventListener('mouseleave', () => {
+        path.setAttribute('opacity', '0.85');
+        path.style.transform = 'scale(1)';
+      });
+      path.addEventListener('click', () => showToast(`${sec.name}: $${sec.value.toLocaleString()}`));
+
+      slicesG.appendChild(path);
+
+      // Legend
+      const item = document.createElement('div');
+      item.className = 'legend-item';
+      item.innerHTML = `
+        <div class="legend-dot" style="background:${sec.color};"></div>
+        <span class="legend-name">${sec.name}</span>
+        <span class="legend-pct">${(pct * 100).toFixed(1)}%</span>
+        <span class="legend-val" style="min-width:90px;">$${Math.round(sec.value / 1000)}K</span>
+      `;
+      legendEl.appendChild(item);
+
+      startAngle = endAngle;
+    });
+
+    // Market news
+    const news = [
+      { source:'Bloomberg', time:'2h ago', headline:'Fed holds rates steady, signals two cuts possible in H2 2026 amid cooling inflation' },
+      { source:'Reuters', time:'3h ago', headline:'Apple jumps 3.2% after iPhone shipment data beats analyst estimates for Q1' },
+      { source:'FT', time:'4h ago', headline:'Berkshire Hathaway increases cash pile to record $215B as Buffett awaits dislocation' },
+      { source:'CNBC', time:'5h ago', headline:'Tesla Autopilot clears major regulatory hurdle in EU; analysts raise price targets' },
+      { source:'WSJ', time:'7h ago', headline:'S&P 500 closes above 5,800 for first time as tech sector leads broad rally' },
+      { source:'Bloomberg', time:'10h ago', headline:'Gold hits 14-month high as dollar weakens following softer PCE inflation print' },
+    ];
+
+    const newsList = document.getElementById('news-list');
+    news.forEach(n => {
+      const div = document.createElement('div');
+      div.className = 'news-item';
+      div.innerHTML = `
+        <div class="news-source">${n.source}</div>
+        <div class="news-headline">${n.headline}</div>
+        <div class="news-time">${n.time}</div>
+      `;
+      newsList.appendChild(div);
+    });
+
+    // Market indices
+    const indices = [
+      { name:'S&P 500',    value:'5,812.40', chg:'+0.82%', pos:true },
+      { name:'NASDAQ',     value:'19,248.12', chg:'+1.14%', pos:true },
+      { name:'DOW',        value:'44,118.56', chg:'+0.41%', pos:true },
+      { name:'VIX',        value:'13.24',    chg:'-1.20%', pos:false },
+      { name:'10Y Yield',  value:'4.28%',    chg:'+0.03',  pos:false },
+      { name:'Gold',       value:'$2,418',   chg:'+0.74%', pos:true },
+    ];
+
+    const midxEl = document.getElementById('market-indices');
+    indices.forEach(idx => {
+      const div = document.createElement('div');
+      div.style.cssText = 'display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border);';
+      div.innerHTML = `
+        <span style="font-size:0.82rem;color:var(--text-2);">${idx.name}</span>
+        <div style="text-align:right;">
+          <div style="font-size:0.875rem;font-weight:700;">${idx.value}</div>
+          <div style="font-size:0.72rem;color:${idx.pos?'var(--green)':'var(--red)'};">${idx.chg}</div>
+        </div>
+      `;
+      midxEl.appendChild(div);
+    });
+    // Remove last border
+    if (midxEl.lastChild) midxEl.lastChild.style.borderBottom = 'none';
+  </script>
+</body>
+</html>
