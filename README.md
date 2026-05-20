@@ -11,12 +11,9 @@
 
 ### Contributed Repo
 # 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=itsreallyhex&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=itsreallyhex&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=itsreallyhex&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
-
----
-[![](https://visitcount.itsvg.in/api?id=ElHexo&icon=0&color=0)](https://visitcount.itsvg.in)
+![](https://github-readme-stats.shion.dev/api?username=itsreallyhex&theme=transparent&hide_border=false&include_all_commits=true&count_private=true)<br/>
+![](https://streak-stats.demolab.com/?user=itsreallyhex&theme=transparent&hide_border=false)<br/>
+![](https://github-readme-stats.shion.dev/api/top-langs/?username=itsreallyhex&theme=transparent&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
   
 [![Discord Presence](https://lanyard.cnrad.dev/api/904399821580943420?borderRadius=:radius50px&idleMessage=Lowkey%20doing%20something.&hideDecoration=true&showDisplayName=true)](https://discord.com/users/904399821580943420t&)
