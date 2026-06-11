@@ -1,19 +1,44 @@
-# Hi, I'm Hex
+<h2 align="left">Hi  My name is Abdulilah Aka Hex</h2>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=itsreallyhex&label=Profile%20views&color=0e75b6&style=flat" alt="itsreallyhex" /> </p>
+###
 
--**I build it so you can use it**
-- Self taught 
-- 15 years old
+<img align="right" height="221" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXU4ZHBwNzhtaHIxbXJreGtwa3VieTRsMGc2bnptdXQxaXp5OWN1ayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o6Zt0WMG2Lhi8aloI/giphy.gif"  />
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://unity.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" alt="unity" width="40" height="40"/> </a> </p>
+###
 
-### Contributed Repo
-# 📊 GitHub Stats:
-![](https://github-readme-stats.shion.dev/api?username=itsreallyhex&theme=transparent&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://streak-stats.demolab.com/?user=itsreallyhex&theme=transparent&hide_border=false)<br/>
-![](https://github-readme-stats.shion.dev/api/top-langs/?username=itsreallyhex&theme=transparent&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+<img align="left" height="220" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXU4ZHBwNzhtaHIxbXJreGtwa3VieTRsMGc2bnptdXQxaXp5OWN1ayZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oriOercvqabDJzXqM/giphy.gif"  />
 
-  
-[![Discord Presence](https://lanyard.cnrad.dev/api/904399821580943420?borderRadius=:radius50px&idleMessage=Lowkey%20doing%20something.&hideDecoration=true&showDisplayName=true)](https://discord.com/users/904399821580943420t&)
+###
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=itsreallyhex&locale=en&mode=daily&theme=prussian&hide_border=false&border_radius=5&order=3" height="150" alt="streak graph"  />
+</div>
+
+###
+
+<div align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="30" alt="python logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" height="30" alt="csharp logo"  />
+  <img width="12" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="30" alt="git logo"  />
+</div>
+
+###
+
+<div align="center">
+  <a href="https://www.youtube.com/@itsreallyhex" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Youtube&logo=youtube&label=&color=FF0000&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="youtube logo"  />
+  </a>
+  <a href="https://www.instagram.com/igitshex/" target="_blank">
+    <img src="https://img.shields.io/static/v1?message=Instagram&logo=instagram&label=&color=E4405F&logoColor=white&labelColor=&style=for-the-badge" height="35" alt="instagram logo"  />
+  </a>
+</div>
+
+###
+
+<br clear="both">
+
+<img src="https://raw.githubusercontent.com/itsreallyhex/itsreallyhex/snake-output/snake.svg" alt="Snake animation" />
+
+###
